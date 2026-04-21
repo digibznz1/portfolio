@@ -1,0 +1,257 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use App\Models\SelfEvaluation;
+
+class SelfEvaluationSeeder extends Seeder
+{
+    public function run(): void
+    {
+        $items = [
+            [
+                'name' => 'جمع اللائحة الأساسية',
+                'explain' => 'الحصول على نسخة محدثة من اللائحة الأساسية',
+                'degree' => random_int(1, 9),
+                'alert' => 'ملف اللائحة',
+                'alert_value' => null,
+                'admin_id' => 1,
+                'category_id' => 1,
+                'organization_type_id' => 1,
+            ],
+            [
+                'name' => 'مراجعة اللائحة',
+                'explain' => 'مراجعة توافق اللائحة مع الأنظمة',
+                'degree' => random_int(1, 9),
+                'alert' => 'ملاحظات المراجعة',
+                'alert_value' => null,
+                'admin_id' => 1,
+                'category_id' => 1,
+                'organization_type_id' => 1,
+            ],
+            [
+                'name' => 'توثيق تعديل اللائحة',
+                'explain' => 'جمع محاضر تعديل اللائحة إن وجدت',
+                'degree' => random_int(1, 9),
+                'alert' => 'في حال لم يتم تعديل اللائحة لا ترفق شي',
+                'alert_value' => null,
+                'admin_id' => 1,
+                'category_id' => 1,
+                'organization_type_id' => 1,
+            ],
+            [
+                'name' => 'خطاب الرفع للمركز',
+                'explain' => 'إعداد خطاب رفع اللائحة للمركز الوطني',
+                'degree' => random_int(1, 9),
+                'alert' => 'خطاب رسمي',
+                'alert_value' => null,
+                'admin_id' => 1,
+                'category_id' => 1,
+                'organization_type_id' => 1,
+            ],
+
+            // الجمعية العمومية
+            [
+                'name' => 'إنشاء سجل الأعضاء',
+                'explain' => 'إعداد سجل أعضاء الجمعية العمومية',
+                'degree' => random_int(1, 9),
+                'alert' => 'تذكر لابد من زيادة أعضاء الجمعية العمومية',
+                'alert_value' => 'سجل أعضاء',
+                'admin_id' => 1,
+                'category_id' => 2,
+                'organization_type_id' => 1,
+            ],
+            [
+                'name' => 'تحديث بيانات الأعضاء',
+                'explain' => 'تحديث الهواتف والبريد',
+                'degree' => random_int(1, 9),
+                'alert' => 'قاعدة بيانات أعضاء',
+                'alert_value' => null,
+                'admin_id' => 1,
+                'category_id' => 2,
+                'organization_type_id' => 2,
+            ],
+            [
+                'name' => 'محضر الجمعية العمومية العادي 2026',
+                'explain' => 'محاضر الجمعية العمومية 2026',
+                'degree' => random_int(1, 9),
+                'alert' => 'تأكد انه تمت مناقشة القوائم المالية 2025 والتقرير السنوي والخطة التشغيلية والموازنة',
+                'alert_value' => 'ملف محاضر',
+                'admin_id' => 1,
+                'category_id' => 2,
+                'organization_type_id' => 2,
+            ],
+            [
+                'name' => 'إرفاق خطابات الإبلاغ',
+                'explain' => 'إرفاق خطابات الإبلاغ للمركز',
+                'degree' => random_int(1, 9),
+                'alert' => 'خطاب الإبلاغ',
+                'alert_value' => null,
+                'admin_id' => 1,
+                'category_id' => 2,
+                'organization_type_id' => 2,
+            ],
+            [
+                'name' => 'رفع القوائم المالية 2025',
+                'explain' => 'إضافة القوائم المعتمدة من الجمعية',
+                'degree' => random_int(1, 9),
+                'alert' => 'القوائم المالية',
+                'alert_value' => null,
+                'admin_id' => 1,
+                'category_id' => 2,
+                'organization_type_id' => 2,
+            ],
+            [
+                'name' => 'إضافة التقرير السنوي 2025',
+                'explain' => 'إضافة التقرير السنوي المعتمد',
+                'degree' => random_int(1, 9),
+                'alert' => 'التقرير السنوي',
+                'alert_value' => null,
+                'admin_id' => 1,
+                'category_id' => 2,
+                'organization_type_id' => 2,
+            ],
+            [
+                'name' => 'إضافة الموازنة 2026',
+                'explain' => 'إضافة الموازنة التقديرية',
+                'degree' => random_int(1, 9),
+                'alert' => 'الموازنة',
+                'alert_value' => null,
+                'admin_id' => 1,
+                'category_id' => 2,
+                'organization_type_id' => 2,
+            ],
+            [
+                'name' => 'إضافة الخطة التشغيلية 2026',
+                'explain' => 'إدراج الخطة التشغيلية',
+                'degree' => random_int(1, 9),
+                'alert' => 'الخطة التشغيلية',
+                'alert_value' => null,
+                'admin_id' => 1,
+                'category_id' => 2,
+                'organization_type_id' => 2,
+            ],
+
+            // مجلس الإدارة
+            [
+                'name' => 'بيانات أعضاء مجلس الإدارة',
+                'explain' => 'تسجيل أعضاء المجلس ومدة الدورة',
+                'degree' => random_int(1, 9),
+                'alert' => 'قاعدة بيانات المجلس',
+                'alert_value' => null,
+                'admin_id' => 1,
+                'category_id' => 3,
+                'organization_type_id' => 3,
+            ],
+            [
+                'name' => 'محاضر اجتماعات مجلس الإدارة 2025',
+                'explain' => 'إنشاء سجل اجتماعات المجلس',
+                'degree' => random_int(1, 9),
+                'alert' => 'لابد أن لا تقل الاجتماعات عن 4 سنويًا',
+                'alert_value' => 'سجل الاجتماعات',
+                'admin_id' => 1,
+                'category_id' => 3,
+                'organization_type_id' => 3,
+            ],
+            [
+                'name' => 'اعداد نموذج متابعة القرارات',
+                'explain' => 'إعداد سجل متابعة قرارات المجلس',
+                'degree' => random_int(1, 9),
+                'alert' => 'سجل القرارات',
+                'alert_value' => null,
+                'admin_id' => 1,
+                'category_id' => 3,
+                'organization_type_id' => 3,
+            ],
+
+            // الرقابة
+            [
+                'name' => 'نظام الرقابة الداخلية',
+                'explain' => 'إعداد نظام رقابة داخلية معتمد من مجلس الإدارة',
+                'degree' => random_int(1, 9),
+                'alert' => 'نظام رقابة + المحضر',
+                'alert_value' => null,
+                'admin_id' => 1,
+                'category_id' => 3,
+                'organization_type_id' => 3,
+            ],
+            [
+                'name' => 'تعيين مراجع داخلي',
+                'explain' => 'قرار تعيين المراجع الداخلي',
+                'degree' => random_int(1, 9),
+                'alert' => 'قرار التعيين',
+                'alert_value' => null,
+                'admin_id' => 1,
+                'category_id' => 3,
+                'organization_type_id' => 3,
+            ],
+
+            // السياسات
+            [
+                'name' => 'سياسة تعارض المصالح',
+                'explain' => 'إعداد السياسة واعتمادها',
+                'degree' => random_int(1, 9),
+                'alert' => 'سياسة معتمدة',
+                'alert_value' => null,
+                'admin_id' => 1,
+                'category_id' => 4,
+                'organization_type_id' => 3,
+            ],
+            [
+                'name' => 'سياسة الإبلاغ عن المخالفات',
+                'explain' => 'إعداد سياسة البلاغات',
+                'degree' => random_int(1, 9),
+                'alert' => 'سياسة البلاغات',
+                'alert_value' => null,
+                'admin_id' => 1,
+                'category_id' => 4,
+                'organization_type_id' => 3,
+            ],
+            [
+                'name' => 'سياسة خصوصية البيانات',
+                'explain' => 'إعداد سياسة حماية البيانات',
+                'degree' => random_int(1, 9),
+                'alert' => 'سياسة الخصوصية',
+                'alert_value' => null,
+                'admin_id' => 1,
+                'category_id' => 4,
+                'organization_type_id' => 3,
+            ],
+            [
+                'name' => 'سياسة الاحتفاظ بالوثائق',
+                'explain' => 'إعداد سياسة إدارة الوثائق',
+                'degree' => random_int(1, 9),
+                'alert' => 'سياسة الوثائق',
+                'alert_value' => null,
+                'admin_id' => 1,
+                'category_id' => 4,
+                'organization_type_id' => 3,
+            ],
+
+            // الإدارة التنفيذية
+            [
+                'name' => 'ملف المدير التنفيذي',
+                'explain' => 'جمع عقد وقرار تعيين المدير',
+                'degree' => random_int(1, 9),
+                'alert' => 'ملف المدير',
+                'alert_value' => null,
+                'admin_id' => 1,
+                'category_id' => 4,
+                'organization_type_id' => 3,
+            ],
+            [
+                'name' => 'ملف المدير المالي',
+                'explain' => 'جمع عقد وقرار تعيين المدير المالي',
+                'degree' => random_int(1, 9),
+                'alert' => 'ملف المحاسب',
+                'alert_value' => null,
+                'admin_id' => 1,
+                'category_id' => 4,
+                'organization_type_id' => 3,
+            ],
+        ];
+
+        SelfEvaluation::insert($items);
+    }
+}

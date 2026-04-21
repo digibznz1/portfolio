@@ -1,0 +1,79 @@
+<x-dashboard.admin.layout.app>
+
+	<x-slot name="title">{{ trans('admin.models.categories') . ' - ' . trans('admin.models.fields') }}</x-slot>	
+	
+	<h1 class="text-lg font-semibold mb-2">{{ trans('admin.evaluations.self_evaluations.model') }}</h1>
+
+	<x-dashboard.admin.layout.includes.breadcrumb :breadcrumb='$breadcrumb' />
+		
+	<div class="flex flex-wrap items-center lg:items-end justify-between gap-5 py-3.5">
+		
+		<div class="flex items-center gap-3">
+			
+			<x-dashboard.admin.button.add permission="create-fields"/>
+
+			<x-dashboard.admin.button.bulk-delete permission="delete-fields"/>
+
+		</div>
+
+	</div>
+
+	<div class="grid gap-5 lg:gap-7.5">
+	
+		<div class="kt-card-grid min-w-full mb-5">
+	
+			<div class="flex-wrap gap-2 mb-2.5">
+
+				<div class="flex flex-wrap gap-2 lg:gap-5">
+				
+					<div class="flex">
+				
+						<x-dashboard.admin.data-table.search />
+				
+					</div>
+				
+					<x-dashboard.admin.data-table.filter>
+
+						<x-input.option :all='true' :choose='false' :lists='$standards' class="w-36" placeholder="{{ trans('admin.global.choose') }}" id="select-standards"/>
+
+					</x-dashboard.admin.data-table.filter>
+				
+				</div>
+
+			</div>{{-- flex-wrap --}}
+	
+			<div class="kt-card-content">
+				
+				<div class="grid">
+					
+					<div class="kt-scrollable-x-auto">
+
+						<table class="kt-table table-auto kt-table-border datatable tbody" data-kt-datatable-table="true" id="data-table">
+					
+							<x-dashboard.admin.data-table.header :columns='$datatables["header"]' />
+					
+						</table>
+					
+					</div>
+
+				</div>{{-- grid --}}
+
+			</div>{{-- card-content --}}
+
+		</div>{{-- card --}}
+
+	</div>{{-- grid --}}
+	
+	<x-slot name="scripts">
+		
+		<x-dashboard.admin.data-table.script :datatables='$datatables' />
+
+		<script>
+			$('#select-standards').on('change', function () {
+				Table.draw();
+			});
+		</script>
+
+	</x-slot>
+
+</x-dashboard.admin.layout.app>

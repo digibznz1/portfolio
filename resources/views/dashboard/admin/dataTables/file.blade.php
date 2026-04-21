@@ -1,0 +1,3 @@
+<a href="{{ $file_path }}" target="_blank" class="kt-btn kt-btn-primary kt-sm">
+	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-output-icon lucide-file-output"><path d="M4.226 20.925A2 2 0 0 0 6 22h12a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v3.127" data--h-bstatus="0OBSERVED"/><path d="M14 2v5a1 1 0 0 0 1 1h5" data--h-bstatus="0OBSERVED"/><path d="m5 11-3 3" data--h-bstatus="0OBSERVED"/><path d="m5 17-3-3h10" data--h-bstatus="0OBSERVED"/></svg>
+</a>
