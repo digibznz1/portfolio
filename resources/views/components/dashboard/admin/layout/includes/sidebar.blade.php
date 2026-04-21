@@ -69,6 +69,19 @@
 
                 @endif
 
+                @auth('admin')
+
+                    {{-- auth --}}
+                    <x-dashboard.admin.layout.includes.sidebar.menu-group-item trans="admin.auth.profile" svg="profiles" show="dashboard.admin.auth.accounts.*">
+                            
+                        <x-dashboard.admin.layout.includes.sidebar.menu-item trans="admin.auth.edit_profile" active="dashboard.admin.auth.accounts.profile.*" route="dashboard.admin.auth.accounts.profile.edit" permission="read-home"/>
+
+                        <x-dashboard.admin.layout.includes.sidebar.menu-item trans="admin.auth.edit_password" active="dashboard.admin.auth.accounts.password.*" route="dashboard.admin.auth.accounts.password.edit" permission="read-home"/>
+
+                    </x-dashboard.admin.layout.includes.sidebar.menu-group-item>
+                
+                @endauth
+
             </div>
             <!-- End of Sidebar Menu -->
         </div>

@@ -26,12 +26,11 @@ class ProfileController extends Controller
     {
         $validated = $request->safe()->except(['image']);
 
-        if(request()->has('image')) {
+        if(request()->hasFile('image')) {
 
             $admin->image != 'default.png' ? Storage::disk('public')->delete($admin->image) : '';
 
             $validated['image'] = request()->file('image')->store('admins', 'public');
-
         }
 
         session()->flash('success', __('admin.messages.updated_successfully'));
