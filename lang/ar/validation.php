@@ -146,6 +146,23 @@ return [
         ],
     ],
 
-    'attributes' => [],
+    'attributes' => [
+        'rfq_name'          => 'الاسم الكامل',
+        'rfq_email'         => 'البريد الإلكتروني',
+        'rfq_company_name'  => 'اسم الشركة',
+        'rfq_activity_type' => 'نوع النشاط',
+        'rfq_budget_range'  => 'نطاق الميزانية',
+        'rfq_project_scope' => 'نطاق المشروع',
+        'rfq_agreed'        => 'سياسة الخصوصية',
+        'quick_name'        => 'الاسم الكامل',
+        'quick_email'       => 'البريد الإلكتروني',
+        'quick_phone'       => 'رقم الهاتف',
+        'quick_message'     => 'الرسالة',
+        'selectedDate'      => 'التاريخ',
+        'selectedSlot'      => 'وقت الموعد',
+        'name'              => 'الاسم الكامل',
+        'email'             => 'البريد الإلكتروني',
+        'phone'             => 'رقم الهاتف',
+    ],
 
 ];

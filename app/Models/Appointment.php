@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use App\Enums\AppointmentStatusEnum;
 
@@ -29,5 +30,11 @@ class Appointment extends Model
                       ->where('status', '!=', AppointmentStatusEnum::CANCELLED)
                       ->exists();
     }
+
+    public function createdAt(): Attribute
+    {
+        return Attribute::make(get: fn ($value) => now()->parse($value)->format('Y-m-d'));
+
+    }//end of get createdAt Attribute
 
 }//end of model

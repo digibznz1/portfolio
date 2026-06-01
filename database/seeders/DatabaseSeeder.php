@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             CtaSeeder::class,
             GeneralSeeder::class,
             MenuSeeder::class,
+            ContactSeeder::class,
         ]);
 
     }//end of run

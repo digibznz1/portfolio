@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Dashboard\Admin\Websites\HeroController;
+use App\Http\Controllers\Dashboard\Admin\Websites\ContactController;
+use App\Http\Controllers\Dashboard\Admin\Websites\AppointmentController;
 use App\Http\Controllers\Dashboard\Admin\Websites\AboutController;
 use App\Http\Controllers\Dashboard\Admin\Websites\WhyUsController;
 use App\Http\Controllers\Dashboard\Admin\Websites\CtaController;
@@ -55,3 +57,26 @@ Route::controller(CtaController::class)
     Route::post('store', 'store')->name('store');
 
 });
+
+// Appointments MUST be before contacts resource to avoid {contact} wildcard catching "appointments"
+Route::prefix('contacts/appointments')->name('contacts.appointments.')->group(function () {
+    Route::controller(AppointmentController::class)->group(function () {
+        Route::get('/',                 'index')->name('index');
+        Route::get('data',              'data')->name('data');
+        Route::post('status',           'status')->name('status');
+        Route::delete('bulk_delete',    'bulkDelete')->name('bulk_delete');
+        Route::get('/{appointment}',    'show')->name('show');
+        Route::delete('/{appointment}', 'destroy')->name('destroy');
+    });
+});
+
+// Contacts (form submissions)
+Route::controller(ContactController::class)
+    ->prefix('contacts')->name('contacts.')->group(function () {
+
+    Route::get('data',          'data')->name('data');
+    Route::post('status',       'status')->name('status');
+    Route::delete('bulk_delete','bulkDelete')->name('bulk_delete');
+
+});
+Route::resource('contacts', ContactController::class)->only(['index', 'show', 'destroy']);

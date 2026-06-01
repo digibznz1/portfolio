@@ -194,6 +194,23 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'rfq_name'          => 'full name',
+        'rfq_email'         => 'email',
+        'rfq_company_name'  => 'company name',
+        'rfq_activity_type' => 'activity type',
+        'rfq_budget_range'  => 'budget range',
+        'rfq_project_scope' => 'project scope',
+        'rfq_agreed'        => 'privacy policy',
+        'quick_name'        => 'full name',
+        'quick_email'       => 'email',
+        'quick_phone'       => 'phone',
+        'quick_message'     => 'message',
+        'selectedDate'      => 'date',
+        'selectedSlot'      => 'time slot',
+        'name'              => 'full name',
+        'email'             => 'email',
+        'phone'             => 'phone',
+    ],
 
 ];

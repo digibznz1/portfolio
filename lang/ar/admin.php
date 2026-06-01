@@ -73,7 +73,6 @@ return array(
             'show_all'    => 'عرض الكل...',
             'header'      => 'قائمة التنقل العلوية',
             'footer'      => 'قائمة التذييل',
-            'sortable'    => 'الترتيب',
             'total'       => 'الإجمالي',
             'price'       => 'السعر',
             'DT_RowIndex' => 'رقم',
@@ -118,6 +117,16 @@ return array(
             'password_invalid'      => 'كلمة مرور غير صحيحة',
       ),
 
+      'contact' => array(
+            'new'     => 'جديد',
+            'read'    => 'مقروء',
+            'replied' => 'تم الرد',
+      ),
+      'appointment' => array(
+            'pending'   => 'قيد الانتظار',
+            'confirmed' => 'مؤكد',
+            'cancelled' => 'ملغي',
+      ),
       'models' => array(
             'home'        => 'الرئسية',
             'managements' => 'الإدارات',
@@ -141,6 +150,10 @@ return array(
             'fields'      => 'المجال',
             'field'       => 'المجال',
             'websites'    => 'الموقع',
+            'contacts'     => 'الرسائل الواردة',
+            'contact'      => 'رسالة',
+            'appointments' => 'المواعيد',
+            'appointment'  => 'موعد',
             'institutions'=> 'ادارة المؤسسات',
             'organization_types' => 'انواع المؤسسات',
             'organization_type' => 'نوع المؤسسة',
