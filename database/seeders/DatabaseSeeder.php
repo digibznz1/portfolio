@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
             ContactSeeder::class,
             AboutPageSeeder::class,
             ServicesPageSeeder::class,
+            PricingPageSeeder::class,
         ]);
 
     }//end of run

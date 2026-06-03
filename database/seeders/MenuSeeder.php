@@ -19,7 +19,7 @@ class MenuSeeder extends Seeder
             ['name' => ['ar' => 'الرئيسية',  'en' => 'Home'],        'link' => '/',         'index' => 1],
             ['name' => ['ar' => 'من نحن',    'en' => 'About Us'],    'link' => '/about',    'index' => 2],
             ['name' => ['ar' => 'خدماتنا',   'en' => 'Services'],    'link' => '/services', 'index' => 3],
-            ['name' => ['ar' => 'لماذا نحن', 'en' => 'Why Us'],      'link' => '#why-us',   'index' => 4],
+            ['name' => ['ar' => 'الأسعار',   'en' => 'Pricing'],     'link' => '/pricing',  'index' => 4],
             ['name' => ['ar' => 'تواصل معنا','en' => 'Contact Us'],  'link' => '/contact',  'index' => 5],
         ];
 
@@ -52,10 +52,11 @@ class MenuSeeder extends Seeder
                 'name'     => ['ar' => 'المصادر',    'en' => 'Resources'],
                 'index'    => 2,
                 'children' => [
-                    ['name' => ['ar' => 'رؤية السعودية 2030', 'en' => 'Saudi Vision 2030'],    'link' => '#', 'index' => 1],
-                    ['name' => ['ar' => 'علاقات المستثمرين',  'en' => 'Investor Relations'],   'link' => '#', 'index' => 2],
-                    ['name' => ['ar' => 'دراسات الحالة',      'en' => 'Case Studies'],          'link' => '#', 'index' => 3],
-                    ['name' => ['ar' => 'الدعم الفني',        'en' => 'Contact Support'],       'link' => '/contact', 'index' => 4],
+                    ['name' => ['ar' => 'الأسعار',            'en' => 'Pricing'],              'link' => '/pricing', 'index' => 1],
+                    ['name' => ['ar' => 'رؤية السعودية 2030', 'en' => 'Saudi Vision 2030'],    'link' => '#',        'index' => 2],
+                    ['name' => ['ar' => 'علاقات المستثمرين',  'en' => 'Investor Relations'],   'link' => '#',        'index' => 3],
+                    ['name' => ['ar' => 'دراسات الحالة',      'en' => 'Case Studies'],          'link' => '#',        'index' => 4],
+                    ['name' => ['ar' => 'الدعم الفني',        'en' => 'Contact Support'],       'link' => '/contact', 'index' => 5],
                 ],
             ],
             [

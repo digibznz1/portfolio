@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Language;
 use App\Models\Member;
 use App\Models\Service;
+use App\Models\Package;
 
 class HomeController extends Controller
 {
@@ -30,6 +31,14 @@ class HomeController extends Controller
         return view('site.services', compact('services'));
 
     }//end of services
+
+    public function pricing()
+    {
+        $packages = Package::all();
+
+        return view('site.pricing', compact('packages'));
+
+    }//end of pricing
 
     public function changeLanguage(Language $language)
     {

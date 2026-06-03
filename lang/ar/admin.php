@@ -155,6 +155,8 @@ return array(
             'appointments'       => 'المواعيد',
             'appointment'        => 'موعد',
             'members'            => 'أعضاء الفريق',
+            'packages'           => 'باقات التسعير',
+            'package'            => 'باقة',
             'institutions'       => 'ادارة المؤسسات',
             'organization_types' => 'انواع المؤسسات',
             'organization_type'  => 'نوع المؤسسة',

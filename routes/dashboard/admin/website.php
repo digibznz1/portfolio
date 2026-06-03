@@ -12,6 +12,8 @@ use App\Http\Controllers\Dashboard\Admin\Websites\ServiceController;
 use App\Http\Controllers\Dashboard\Admin\Websites\AboutPageController;
 use App\Http\Controllers\Dashboard\Admin\Websites\ServicesSettingController;
 use App\Http\Controllers\Dashboard\Admin\Websites\MemberController;
+use App\Http\Controllers\Dashboard\Admin\Websites\PackageController;
+use App\Http\Controllers\Dashboard\Admin\Websites\PricingSettingController;
 
 //Websites hero
 Route::controller(HeroController::class)
@@ -123,3 +125,23 @@ Route::controller(AboutPageController::class)
     Route::post('store', 'store')->name('store');
 
 });
+
+// Packages (pricing) — setting BEFORE resource
+Route::controller(PricingSettingController::class)
+    ->prefix('packages/setting')->name('packages.setting.')->group(function () {
+
+    Route::get('/',      'index')->name('index');
+    Route::post('store', 'store')->name('store');
+
+});
+
+Route::controller(PackageController::class)
+    ->prefix('packages')->name('packages.')->group(function () {
+
+    Route::get('data',           'data')->name('data');
+    Route::post('status',        'status')->name('status');
+    Route::delete('bulk_delete', 'bulkDelete')->name('bulk_delete');
+    Route::post('sortable',      'storeSortable')->name('sortable.store');
+
+});
+Route::resource('packages', PackageController::class)->except('show');

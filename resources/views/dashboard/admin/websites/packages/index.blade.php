@@ -1,0 +1,56 @@
+<x-dashboard.admin.layout.app>
+
+    <x-slot name="title">{{ trans('admin.models.websites') . ' - ' . trans('admin.models.packages') }}</x-slot>
+
+    <h1 class="text-lg font-semibold mb-2">{{ trans('admin.models.packages') }}</h1>
+
+    <x-dashboard.admin.layout.includes.breadcrumb :breadcrumb='$breadcrumb' />
+
+    <div class="flex flex-wrap items-center lg:items-end justify-between pt-3.5">
+        <div class="flex items-center gap-3">
+
+            <x-dashboard.admin.button.add permission="create-packages"/>
+
+            <x-dashboard.admin.button.bulk-delete permission="delete-packages"/>
+
+            <a href="{{ route('dashboard.admin.websites.packages.setting.index') }}"
+               class="kt-btn kt-btn-outline flex items-center gap-2">
+                <i class="ki-filled ki-setting-2 text-base"></i>
+                {{ trans('admin.settings.general') }}
+            </a>
+
+        </div>
+    </div>
+
+    <div class="grid gap-5 lg:gap-7.5">
+
+        <div class="kt-card-grid min-w-full my-5">
+
+            <div class="flex-wrap gap-2 mb-2.5">
+                <div class="flex flex-wrap gap-2 lg:gap-5">
+                    <div class="flex">
+                        <x-dashboard.admin.data-table.search />
+                    </div>
+                    <x-dashboard.admin.data-table.filter />
+                </div>
+            </div>
+
+            <div class="kt-card-content">
+                <div class="grid">
+                    <div class="kt-scrollable-x-auto">
+                        <table class="datatable" id="data-table">
+                            <x-dashboard.admin.data-table.header :columns='$datatables["header"]' />
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <x-slot name="scripts">
+        <x-dashboard.admin.data-table.script :datatables='$datatables' />
+    </x-slot>
+
+</x-dashboard.admin.layout.app>

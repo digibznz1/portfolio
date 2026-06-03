@@ -69,6 +69,8 @@
 
                             <x-dashboard.admin.layout.includes.sidebar.menu-item trans="admin.websites.cta" active="dashboard.admin.websites.cta.*" route="dashboard.admin.websites.cta.index" permission="read-cta"/>
 
+                            <x-dashboard.admin.layout.includes.sidebar.menu-item trans="admin.models.packages" active="dashboard.admin.websites.packages.*" route="dashboard.admin.websites.packages.index" permission="read-packages"/>
+
                             <x-dashboard.admin.layout.includes.sidebar.menu-group-item trans="admin.websites.about" svg="websites" show="dashboard.admin.websites.about.*">
 
                                 <x-dashboard.admin.layout.includes.sidebar.menu-item trans="admin.websites.about_page" active="dashboard.admin.websites.about.setting.*" route="dashboard.admin.websites.about-page.index" permission="read-about-page"/>
