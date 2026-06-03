@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             GeneralSeeder::class,
             MenuSeeder::class,
             ContactSeeder::class,
+            AboutPageSeeder::class,
         ]);
 
     }//end of run

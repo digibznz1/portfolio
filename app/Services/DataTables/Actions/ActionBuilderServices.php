@@ -16,7 +16,7 @@ class ActionBuilderServices implements ActionBuilderInterfaceServices
         $this->model       = $model;
         $this->permissions = $permissions;
         $this->parameters  = $parameters;
-        $this->baseRoute   = 'dashboard.admin.' . request()->segment(3) . '.' . request()->segment(4);
+        $this->baseRoute   = 'dashboard.admin.' . request()->segment(3) . '.' . request()->segment(4) . (request()->segment(5) ? '.' . request()->segment(5) : '');
     }
 
     /**

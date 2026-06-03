@@ -3,7 +3,7 @@
         $baseRoute
         . request()->segment(3) . '.'
         . request()->segment(4)
-        . (request()->segment(6) ? '.' . request()->segment(6) : '')
+        . (request()->segment(5) ? '.' . request()->segment(5) : '')
         . '.create',
         $prams
    ) }}">    

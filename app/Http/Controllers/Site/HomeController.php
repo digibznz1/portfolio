@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
 use App\Models\Language;
+use App\Models\Member;
 
 class HomeController extends Controller
 {
@@ -12,6 +13,14 @@ class HomeController extends Controller
         return view('site.index');
 
     }//end of index
+
+    public function about()
+    {
+        $members = Member::all();
+
+        return view('site.about', compact('members'));
+
+    }//end of about
 
     public function changeLanguage(Language $language)
     {

@@ -201,6 +201,7 @@ return array('global' =>
                   'contact'      => 'Contact',
                   'appointments' => 'Appointments',
                   'appointment'  => 'Appointment',
+                  'team'         => 'Team Members',
                   'serve'        => 'Serve',
                   'serves'       => 'Serves',
                   'orders'       => 'Orders',
@@ -219,6 +220,7 @@ return array('global' =>
                   'product_images'  => 'Product images',
             ),
             'websites' => array(
+                  'about_page'    => 'About Page',
                   'hero'          => 'Hero',
                   'hero_features' => 'Feature Cards',
                   'feature'       => 'Feature',

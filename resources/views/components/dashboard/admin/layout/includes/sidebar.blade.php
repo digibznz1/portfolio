@@ -69,6 +69,14 @@
 
                             <x-dashboard.admin.layout.includes.sidebar.menu-item trans="admin.websites.cta" active="dashboard.admin.websites.cta.*" route="dashboard.admin.websites.cta.index" permission="read-cta"/>
 
+                            <x-dashboard.admin.layout.includes.sidebar.menu-group-item trans="admin.websites.about" svg="websites" show="dashboard.admin.websites.about.*">
+
+                                <x-dashboard.admin.layout.includes.sidebar.menu-item trans="admin.websites.about_page" active="dashboard.admin.websites.about.setting.*" route="dashboard.admin.websites.about-page.index" permission="read-about-page"/>
+
+                                <x-dashboard.admin.layout.includes.sidebar.menu-item trans="admin.models.members" active="dashboard.admin.websites.about.members.*" route="dashboard.admin.websites.about.members.index" permission="read-members"/>
+
+                            </x-dashboard.admin.layout.includes.sidebar.menu-group-item>
+
                             <x-dashboard.admin.layout.includes.sidebar.menu-group-item trans="admin.models.contacts" svg="websites" show="dashboard.admin.websites.contacts.*">
     
                                 <x-dashboard.admin.layout.includes.sidebar.menu-item trans="admin.models.contacts" active="dashboard.admin.websites.contacts.*" route="dashboard.admin.websites.contacts.index" permission="read-contacts"/>
