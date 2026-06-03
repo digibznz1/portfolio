@@ -7,7 +7,7 @@ use App\Http\Requests\Dashboard\Admin\Websites\Members\MemberRequest;
 use App\Http\Requests\Dashboard\Admin\Websites\Members\DeleteRequest;
 use App\Http\Requests\Dashboard\Admin\Websites\Members\StatusRequest;
 use App\Models\Member;
-use Illuminate\View\View;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
 use Illuminate\Contracts\Foundation\Application;
@@ -61,7 +61,7 @@ class MemberController extends Controller
             ->editColumn('name', fn(Member $m) => '<div><p class="font-medium">' . e($m->name) . '</p><p class="text-xs text-gray-400">' . e($m->position) . '</p></div>')
             ->editColumn('position', fn(Member $m) => e($m->position))
             ->addColumn('status', fn(Member $m) => view('dashboard.admin.dataTables.checkbox', ['models' => $m, 'permissions' => $permissions, 'type' => 'status']))
-            ->addColumn('actions', fn(Member $m) => datatableAction($m, $permissions)->buttons()->build())
+            ->addColumn('actions', fn(Member $m) => datatableAction($m, $permissions)->baseRoute('dashboard.admin.websites.about.members')->buttons()->build())
             ->rawColumns(['record_select', 'actions', 'status', 'image', 'name'])
             ->addIndexColumn()
             ->toJson();

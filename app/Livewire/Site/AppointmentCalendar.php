@@ -84,13 +84,25 @@ class AppointmentCalendar extends Component
         return $days;
     }
 
+    private function getTimeSlots(): array
+    {
+        $default = ['09:00 AM', '10:30 AM', '01:15 PM', '03:45 PM'];
+        $raw     = setting('contact')->toArray();
+        $slots   = $raw['time_slots'] ?? $default;
+
+        return array_values(array_filter(
+            is_array($slots) ? $slots : $default,
+            fn($s) => is_string($s)
+        ));
+    }
+
     public function getAvailableSlotsProperty(): array
     {
         if (!$this->selectedDate) {
-            return setting('contact')->getValue('time_slots') ?? ['09:00 AM', '10:30 AM', '01:15 PM', '03:45 PM'];
+            return $this->getTimeSlots();
         }
 
-        $allSlots = setting('contact')->getValue('time_slots') ?? ['09:00 AM', '10:30 AM', '01:15 PM', '03:45 PM'];
+        $allSlots = $this->getTimeSlots();
 
         $booked = Appointment::where('date', $this->selectedDate)
                              ->where('status', '!=', AppointmentStatusEnum::CANCELLED->value)

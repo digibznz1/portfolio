@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
             MenuSeeder::class,
             ContactSeeder::class,
             AboutPageSeeder::class,
+            ServicesPageSeeder::class,
         ]);
 
     }//end of run

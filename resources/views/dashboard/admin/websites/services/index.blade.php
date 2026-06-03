@@ -9,10 +9,16 @@
 	<div class="flex flex-wrap items-center lg:items-end justify-between pt-3.5">
 		
 		<div class="flex items-center gap-3">
-			
-			<x-dashboard.admin.button.add permission="create-admin"/>
 
-			<x-dashboard.admin.button.bulk-delete permission="delete-admin"/>
+			<x-dashboard.admin.button.add permission="create-services"/>
+
+			<x-dashboard.admin.button.bulk-delete permission="delete-services"/>
+
+			<a href="{{ route('dashboard.admin.websites.services.setting.index') }}"
+			   class="kt-btn kt-btn-outline flex items-center gap-2">
+				<i class="ki-filled ki-setting-2 text-base"></i>
+				{{ trans('admin.settings.general') }}
+			</a>
 
 		</div>
 

@@ -10,6 +10,7 @@ use App\Http\Controllers\Dashboard\Admin\Websites\WhyUsController;
 use App\Http\Controllers\Dashboard\Admin\Websites\CtaController;
 use App\Http\Controllers\Dashboard\Admin\Websites\ServiceController;
 use App\Http\Controllers\Dashboard\Admin\Websites\AboutPageController;
+use App\Http\Controllers\Dashboard\Admin\Websites\ServicesSettingController;
 use App\Http\Controllers\Dashboard\Admin\Websites\MemberController;
 
 //Websites hero
@@ -63,6 +64,16 @@ Route::controller(ServiceController::class)
 
     });
 Route::resource('services', ServiceController::class)->except('show');
+
+// Websites settings
+Route::controller(ServicesSettingController::class)
+    ->prefix('services/setting')->name('services.setting.')->group(function () {
+
+    Route::get('/',      'index')->name('index');
+    Route::post('store', 'store')->name('store');
+
+});
+
 
 //Websites why_us
 Route::controller(WhyUsController::class)

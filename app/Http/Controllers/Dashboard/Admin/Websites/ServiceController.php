@@ -56,7 +56,7 @@ class ServiceController extends Controller
             ->editColumn('name', fn (Service $service) => $service?->name)
             ->editColumn('icon', fn (Service $service) => '<span class="material-symbols-outlined text-1xl">' . e($service->icon) . '</span>')
             ->editColumn('description', fn (Service $service) => str()->limit($service?->description, 70))
-            ->addColumn('actions', fn(Service $service) => datatableAction($service, $permissions)->buttons()->build())
+            ->addColumn('actions', fn(Service $service) => datatableAction($service, $permissions)->baseRoute('dashboard.admin.websites.services')->buttons()->build())
             ->addColumn('status', fn (Service $service) => view('dashboard.admin.dataTables.checkbox', ['models' => $service, 'permissions' => $permissions, 'type' => 'status']))
             ->rawColumns(['record_select', 'actions', 'status', 'icon'])
             ->addIndexColumn()

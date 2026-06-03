@@ -18,7 +18,7 @@ class MenuSeeder extends Seeder
         $headerItems = [
             ['name' => ['ar' => 'الرئيسية',  'en' => 'Home'],        'link' => '/',         'index' => 1],
             ['name' => ['ar' => 'من نحن',    'en' => 'About Us'],    'link' => '/about',    'index' => 2],
-            ['name' => ['ar' => 'خدماتنا',   'en' => 'Services'],    'link' => '#services', 'index' => 3],
+            ['name' => ['ar' => 'خدماتنا',   'en' => 'Services'],    'link' => '/services', 'index' => 3],
             ['name' => ['ar' => 'لماذا نحن', 'en' => 'Why Us'],      'link' => '#why-us',   'index' => 4],
             ['name' => ['ar' => 'تواصل معنا','en' => 'Contact Us'],  'link' => '/contact',  'index' => 5],
         ];

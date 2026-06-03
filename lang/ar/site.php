@@ -1,9 +1,10 @@
 <?php
 
 return [
+
     'home'             => 'الرئيسية',
-    'contact'          => 'تواصل معنا',
     'about'            => 'من نحن',
+    'contact_nav'      => 'تواصل معنا',
     'products'         => 'المنتجات',
     'product'          => 'المنتج',
     'categories'       => 'الاقسام',
@@ -19,34 +20,31 @@ return [
     'subscribe'        => 'اشترك',
     'ar'               => 'العربية',
     'en'               => 'English',
-    'contact'          => 'تواصل معنا',
     'all'              => 'الكل',
-    'move'       	   => 'اسحب للمعاينة',
+    'move'             => 'اسحب للمعاينة',
     'read_more'        => 'اقرأ المزيد',
     'view_more'        => 'عرض المزيد',
     'view_details'     => 'عرض التفاصيل',
     'search_blogs'     => 'بحث في المدونة',
     'related_blogs'    => 'مدونات ذات صلة',
-    'no_data_found'    => 'لايوجد بينات لعرضها',
-
+    'no_data_found'    => 'لا يوجد بيانات لعرضها',
     'send_order'       => 'لطلبات الجملة والتوريد',
-    'send'		       => 'ارسال',
+    'send'             => 'ارسال',
     'call_now'         => 'اتصل الآن',
     'enter_product'    => 'ادخل اسم المنتج',
     'related_products' => 'منتجات ذات صلة',
     'back_categories'  => 'العودة إلى التصنيفات',
-
     'send_message'     => 'أرسل رسالة',
     'save_success'     => 'تمت الإضافة بنجاح 😎',
     'select'           => 'اختر',
-    'cv'               => 'ارفق ملف السيرة الزاتية',
+    'cv'               => 'ارفق ملف السيرة الذاتية',
     'distributor'      => 'موزع',
-	'client'           => 'عميل',
+    'client'           => 'عميل',
     'name'             => 'الاسم الكامل',
     'email'            => 'البريد الإلكتروني',
     'phone'            => 'رقم الهاتف',
-    'whatsapp' 	       => 'واتساب',
-	'call_us' 	       => 'اتصل بنا',
+    'whatsapp'         => 'واتساب',
+    'call_us'          => 'اتصل بنا',
     'business_name'    => 'اسم العمل',
     'message'          => 'الرسالة',
     'enter_name'       => 'ادخل اسمك الكامل',
@@ -56,18 +54,15 @@ return [
     'type_cooperation' => 'نوع التعاون',
     'become_partners'  => 'كن شريكًا',
     'become_job'       => 'كن موظفًا',
-
     'order_success'    => 'تم إرسال الطلب بنجاح',
     'subscribe_success'=> 'شكرًا لاشتراكك!',
-
-    'price'      => 'السعرات للحصه',
-	'code'       => 'الباركود',
-	'size'       => 'المقاس',
-	'package'    => 'التعبئة',
-	'allergens'  => 'مسببات الحساسيه',
-
-    'copyright'  => 'حقوق الطبع والنشر',
-	'all_rights' => 'جميع الحقوق محفوظة',
+    'price'            => 'السعرات للحصة',
+    'code'             => 'الباركود',
+    'size'             => 'المقاس',
+    'package'          => 'التعبئة',
+    'allergens'        => 'مسببات الحساسية',
+    'copyright'        => 'حقوق الطبع والنشر',
+    'all_rights'       => 'جميع الحقوق محفوظة',
 
     'hero' => [
         'start_journey' => 'ابدأ رحلتك',
@@ -102,4 +97,5 @@ return [
         'available_slots'     => 'المواعيد المتاحة',
         'live_schedule'       => 'جدول مباشر',
     ],
+
 ];

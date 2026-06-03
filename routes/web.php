@@ -7,7 +7,8 @@ use App\Http\Controllers\Site\ContactController;
 Route::view('/welcome', 'welcome');
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('about', [HomeController::class, 'about'])->name('about');
+Route::get('about',    [HomeController::class, 'about'])->name('about');
+Route::get('services', [HomeController::class, 'services'])->name('services');
 Route::get('language/{language:code}', [HomeController::class, 'changeLanguage'])->name('changeLanguage');
 
 // Contact page + AJAX endpoints

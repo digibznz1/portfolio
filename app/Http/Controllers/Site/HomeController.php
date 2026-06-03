@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Site;
 use App\Http\Controllers\Controller;
 use App\Models\Language;
 use App\Models\Member;
+use App\Models\Service;
 
 class HomeController extends Controller
 {
@@ -21,6 +22,14 @@ class HomeController extends Controller
         return view('site.about', compact('members'));
 
     }//end of about
+
+    public function services()
+    {
+        $services = Service::all();
+
+        return view('site.services', compact('services'));
+
+    }//end of services
 
     public function changeLanguage(Language $language)
     {

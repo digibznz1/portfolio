@@ -87,6 +87,8 @@
     </script>
 
     <style>
+        [x-cloak] { display: none !important; }
+
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
@@ -143,8 +145,9 @@
 
     {{ $slot }}
 
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     {{ $scripts ?? '' }}
-    
+
 </body>
 
 </html>
